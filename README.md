@@ -15,6 +15,25 @@ pip install -r requirements.txt
 Due to the global TaskRegistry, all tasks are registered at one place 
 without the distinction which huey instance was used to decorate the method.
 
+```python
+# simple_example.py
+from huey import RedisHuey, crontab
+
+
+huey1 = RedisHuey('app1', host='localhost')
+huey2 = RedisHuey('app2', host='localhost')
+
+
+@huey1.periodic_task(crontab(minute="*"))
+def periodic_task_1():
+    print(periodic_task_1)
+
+
+@huey2.periodic_task(crontab(minute="*"))
+def periodic_task_2():
+    print(periodic_task_2)
+```
+
 ```bash
 # Run the consumer
 huey_consumer.py simple_example.huey1
