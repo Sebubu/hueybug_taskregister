@@ -49,15 +49,3 @@ huey_consumer.py simple_example.huey1
 ```
 Thus both periodic tasks are executed although only one is associated with the huey1 instance.
 
-## Bug djhuey
-This is an example with the new djhuey pull request.
-```text
-python manage.py run_huey -qu p1
-
-Output:
-INFO:huey.consumer:The following commands are available:
-+ periodic_task_p2
-+ task_p2
-+ periodic_task_p1
-+ task_p1
-```
