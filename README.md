@@ -31,8 +31,7 @@ huey_consumer.py simple_example.huey1
 Thus the both periodic tasks as executed although only one is associated with the huey1 instance.
 
 ## Bug djhuey
-As soon as a consumer is started (in this specific case p1), 
-all periodic tasks are scheduled, even the one of another huey instance.
+This is an example with the new djhuey pull request.
 ```text
 python manage.py run_huey -qu p1
 
