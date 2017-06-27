@@ -1,7 +1,7 @@
 # hueybug_taskregister
 Shows a bug in huey with the global task register
 
-## Run
+## Prepare to run
 
 ```bash
 git clone https://github.com/Sebubu/hueybug_taskregister.git
