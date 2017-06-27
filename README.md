@@ -47,7 +47,7 @@ huey_consumer.py simple_example.huey1
 + periodic_task_2
 + periodic_task_1
 ```
-Thus the both periodic tasks are executed although only one is associated with the huey1 instance.
+Thus both periodic tasks are executed although only one is associated with the huey1 instance.
 
 ## Bug djhuey
 This is an example with the new djhuey pull request.
